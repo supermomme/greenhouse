@@ -1,0 +1,27 @@
+{
+  "name": "greenhouse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "serve": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/supermomme/greenhouse.git"
+  },
+  "author": "Momme Jürgensen <momme+npm@juergensen.me>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supermomme/greenhouse/issues"
+  },
+  "homepage": "https://github.com/supermomme/greenhouse#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "johnny-five": "^1.1.0"
+  }
+}
