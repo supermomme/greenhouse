@@ -17,13 +17,13 @@ setInterval(function() {
   dht11.read(11, 17, function(err, temperature, humidity) {
     if (err) throw err;
     //console.log(temperature, humidity)
-    mqtt.publish(`greenhouse/temperature/indoor`, temperature.toFixed(1).toString())
-    mqtt.publish(`greenhouse/humidity/indoor`, humidity.toFixed(1).toString())
+    mqtt.publish(`greenhouse/temperature/indoor`, temperature.toFixed(1).toString(), {retain: true})
+    mqtt.publish(`greenhouse/humidity/indoor`, humidity.toFixed(1).toString(), {retain: true})
   })
 
   let outdoorTemperature = ds18b20.temperatureSync(outdoorSensorId)
   //console.log(outdoorTemperature)
-  mqtt.publish(`greenhouse/temperature/outdoor`, outdoorTemperature.toString())
+  mqtt.publish(`greenhouse/temperature/outdoor`, outdoorTemperature.toString(), {retain: true})
 }, sensorCrawlInterval)
 
 
