@@ -13,3 +13,4 @@ The Sensors are send to an mqtt broker in following topics:
 * outdoor temperature (DS18B20) = **greenhouse/temperature/outdoor**
 * *Comming Soon*
   * soil moisture = **greenhouse/moisture/soil/*n***
+    * average with **greenhouse/moisture/soil/average**
