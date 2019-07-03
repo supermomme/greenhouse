@@ -39,7 +39,7 @@ board.on("ready", function() {
   ]
   moisture.forEach((sensor, sensorId) => {
     sensor.on('data', (data) => {
-      console.log(data)
+      //console.log(data)
       let low = 250;
       let high = 600;
       let percentage = Math.round((1 - (data-low)/(high-low)) * 1000) / 10
